@@ -14,6 +14,12 @@
 // 3. painting
 // Total hobbies: 3
 
+let hobbies=['Miniature Painting', '3d printing', 'motorcycle riding', 'reading'];
+for (let x= 0; x < hobbies.length; x++) {
+     console.log(`${x+1}. ${hobbies[x]}`);
+}
+console.log(hobbies.length);
+
 /**
  * #2 Colors
  * ---------
@@ -29,7 +35,14 @@
 // Example output
 // green, red, teal, orange, teal
 // Teal was found 2 times
-
+let colors = ['blue', 'green', 'teal', 'purple'];
+let tealCount = 0;
+for (let x = 0; x < colors.length; x++) {
+     if (colors[x] === 'teal') {
+          tealCount++;
+     }
+}
+console.log(`Teal was found ${tealCount} times`);
 
 /**
  * #3 Even & Odd
@@ -47,6 +60,23 @@
 // Odd 3, 7, 11
 // Even 2, 8, 4, 2
 
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let oddNumbers = [];
+let evenNumbers = [];
+
+for(let x of numbers)
+{
+     if (x % 2 === 0){
+          evenNumbers.push(x);
+     } else {
+          oddNumbers.push(x);
+     }
+}
+
+console.log('Odd ' + oddNumbers);
+console.log('Even ' + evenNumbers);
+
+
 
 /**
  * #4 Flipping Switches
@@ -62,6 +92,15 @@
 // true, false, true, true
 // Toggled false, true, false, false
 
+const booleans = [true, false, true, true, false];
+let toggled = [];
+
+for (let x of booleans) {
+     toggled.push(!x);
+     } 
+
+console.log(booleans);
+console.log('Toggled', toggled);
 
 /**
  * #5 (STRETCH) Remove 0's
@@ -79,6 +118,20 @@
 // Example output
 // Before loop 3, 0, 2, 8, 0, 0, 0
 // After loop 3, 0, 2, 8
+
+let numberArray = [1, 5, 3, 0, 7, 0 , 0 , 0];
+let y = numberArray.length - 1;
+
+console.log('Before loop', numberArray);
+while (numberArray[y] === 0) {
+     numberArray.pop();
+     y--;
+}
+console.log('After loop', numberArray);
+
+
+
+
 
 
 /**
